@@ -1,0 +1,38 @@
+
+# ── InsForge & AI agent skills ─────────────────────────────────────────────
+.insforge
+.agent
+.agents
+.augment
+.claude
+.cline
+.github/copilot*
+.kilocode
+.qoder
+.qwen
+.roo
+.trae
+.windsurf
+
+# ── Secrets & credentials ──────────────────────────────────────────────────
+.env
+.env.*
+*.local
+
+# InsForge project config contains api_key — never commit it
+.insforge/project.json
+
+# ── Utility / test scripts that may contain hardcoded keys ────────────────
+mcp.js
+test_*.js
+test_*.mjs
+test_*.cjs
+create_admin*.js
+create_admin*.cjs
+convert.cjs
+download.ps1
+
+# ── Node & build artifacts ────────────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
