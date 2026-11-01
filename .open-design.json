@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "designSystem": {
+    "slug": "stripe-numis-luxury",
+    "path": "design-systems/stripe",
+    "inspiration": [
+      "stripe",
+      "luxury"
+    ]
+  },
+  "skill": {
+    "slug": "frontend-design",
+    "path": "skills/frontend-design",
+    "kind": "skill",
+    "mode": "prototype"
+  },
+  "craft": [
+    "anti-ai-slop",
+    "typography-hierarchy",
+    "color",
+    "animation-discipline",
+    "accessibility-baseline"
+  ],
+  "boundAt": "2026-11-01T11:00:00Z"
+}

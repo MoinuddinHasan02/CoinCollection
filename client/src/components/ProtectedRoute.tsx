@@ -37,7 +37,7 @@ export function ProtectedRoute({ children, requireAdmin = false }: Props) {
       }
 
       // Check admin role via direct DB query to avoid SDK caching/timing issues
-      const profileRes = await insforge.database
+      const profileRes: any = await insforge.database
         .from('profiles')
         .select('role')
         .eq('id', authData.user.id)

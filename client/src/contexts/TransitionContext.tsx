@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { gsap } from '../lib/gsapConfig';
 
 interface TransitionContextType {
-  navigateTo: (path: string) => void;
+  navigateTo: (path: string, options?: { state?: unknown }) => void;
 }
 
 const TransitionContext = createContext<TransitionContextType>({
@@ -67,7 +67,7 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
 
   // ── Animate out then navigate ─────────────────────────────────────────────
   const navigateTo = useCallback(
-    (path: string) => {
+    (path: string, options?: { state?: unknown }) => {
       const overlay = overlayRef.current;
       if (!overlay || isAnimating.current || location.pathname === path) return;
 
@@ -82,7 +82,7 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
           transformOrigin: 'left center',
           duration: 0.55,
           ease: 'expo.inOut',
-          onComplete: () => navigate(path),
+          onComplete: () => navigate(path, options),
         }
       );
     },
